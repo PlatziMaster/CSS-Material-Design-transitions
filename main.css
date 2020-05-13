@@ -1,0 +1,80 @@
+body {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin: 0;
+    color: white;
+}
+
+p {
+    font-size: .8rem;
+    color: white;
+}
+
+span {
+    position: relative;
+    float: right;
+    margin-right: 4%;
+    color: white;
+    transition: color .3s;
+}
+
+section {
+    width: 250px;
+    padding: 1em;
+    background-color: #4caf50;
+    border-radius: 10px;
+    clip-path: circle(10% at 90% 20%);
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+section:hover {
+    clip-path: circle(75%);
+    background-color: #00b6ff;
+}
+
+section:hover span {
+    color: rgba(255,255,255,0);
+}
+
+/* =================================== */
+     /* Button with effect ripple  */
+/* =================================== */
+
+button {
+    padding: 12px 18px;
+    font-size: 16px;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: #2196f3;
+    box-shadow: 0 0 4px #999;
+    cursor: pointer;
+    outline: none;
+}
+
+.ripple {
+    background-position: center;
+    transition: background 0.8s;
+}
+
+.ripple:hover {
+    background-color: #47a7f5;
+    background-image: radial-gradient(circle, transparent 1%, #47a7f5 1%);
+    background-position: center;
+    background-size: 15000%;
+}
+
+.ripple:active {
+    transition: background 0s;
+    background-color: #6eb9f7;
+    background-size: 100%;
+}
